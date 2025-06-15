@@ -28,14 +28,14 @@ export const DEFAULT_CONFIGURATION: DefaultConfigurationType = {
   author: {
     avatar,
     name: 'Aip Achtarudin',
-    headline: 'Web Fullstack Developer',
+    headline: 'Fullstack Web Developer',
     username: 'achtarudin',
     location: 'Jakarta, Indonesia',
     pronouns: 'He/Him',
   },
   seo: {
-    title: "Aip Achtarudin — Web Fullstack Developer",
-    description: 'Personal portfolio of Aip Achtarudin, a Web Fullstack Developer based in Jakarta, Indonesia. Clean and aesthetic showcase for projects and skills.',
+    title: "Aip Achtarudin — Fullstack WebDeveloper",
+    description: 'Personal portfolio of Aip Achtarudin, a Fullstack Web Developer based in Jakarta, Indonesia. Clean and aesthetic showcase for projects and skills.',
     type: 'website',
     image: MetaDefaultImage,
     twitter: {

@@ -59,6 +59,18 @@ const talkCollection = defineCollection({
   }),
 });
 
+const educationCollection = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/educations' }),
+  schema: z.object({
+    title: z.string(),
+    year: z.number(),
+    event: z.string(),
+    location: z.string(),
+    url: z.string(),
+  }),
+});
+
+
 const postCollection = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/posts' }),
   schema: ({ image }) => z.object({
@@ -74,5 +86,6 @@ export const collections = {
   links: linkCollection,
   jobs: jobCollection,
   talks: talkCollection,
+  educations: educationCollection,
   posts: postCollection,
 };
