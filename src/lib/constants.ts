@@ -34,13 +34,13 @@ export const DEFAULT_CONFIGURATION: DefaultConfigurationType = {
     pronouns: 'He/Him',
   },
   seo: {
-    title: "Aip Achtarudin — Fullstack WebDeveloper",
-    description: 'Personal portfolio of Aip Achtarudin, a Fullstack Web Developer based in Jakarta, Indonesia. Clean and aesthetic showcase for projects and skills.',
-    type: 'website',
-    image: MetaDefaultImage,
-    twitter: {
-      creator: '@achtarudin'
-    },
-    robots: 'index, follow',
-  }
+  title: "Aip Achtarudin — Fullstack Web Developer dari Jakarta",
+  description: "Halo! Saya Aip, seorang developer web fullstack dari Jakarta. Ini adalah tempat saya berbagi proyek, pengalaman, dan hal-hal yang saya pelajari di dunia pemrograman.",
+  type: "website",
+  image: MetaDefaultImage,
+  twitter: {
+    creator: "@achtarudin"
+  },
+  robots: "index, follow"
+}
 };
