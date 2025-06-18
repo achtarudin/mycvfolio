@@ -1,6 +1,6 @@
 ---
-title: "Project ADA Dashboard"
-date: 2025-06-18
+title: "Project ADA Dashboard (Bahaso)"
+date: 2024-06-18
 image: "./meta.jpg"
 
 seo:
@@ -10,7 +10,11 @@ seo:
   keywords: dashboard, API integration, invoice system, training simulation, astro portfolio
 ---
 
-import Image from 'astro:assets'
+import { Image } from 'astro:assets';
+import simulationPage from './ada-bo-simulation-page.png';
+import invoicePage from './ada-bo-invoice.png';
+import apiPage from './ada-bo-api.png';
+
 
 #### 🧾 Deskripsi Proyek
 
@@ -18,7 +22,7 @@ import Image from 'astro:assets'
 
 - Simulasi transaksi pelatihan (Training Simulation)
 - Invoice sistem cicilan termin
-- Integrasi API internal
+- Integrasi API internal dengan **LMS Moodle**
 - Monitoring peserta, tutor, dan pembayaran
 
 Proyek ini digunakan oleh tim operasional untuk mendukung proses bisnis pelatihan digital bersertifikat.
@@ -47,8 +51,9 @@ Proyek ini digunakan oleh tim operasional untuk mendukung proses bisnis pelatiha
 #### 🧑‍💻 Teknologi yang Digunakan
 
 - **Frontend:** Laravel + Livewire
-- **Backend:** Laravel + Moodle
-- **Database:** Mysql
+- **Backend:** Laravel + LMS Moodle
+- **Database:** Mysql, Redis
+- **Development:** Docker, Git
 - **PDF Generator:** HTML → PDF backend rendering
 - **API Documentation:** Swagger UI
 
@@ -58,15 +63,15 @@ Proyek ini digunakan oleh tim operasional untuk mendukung proses bisnis pelatiha
 
 #### 1. Simulasi Transaksi
 
-![Simulasi Transaksi](./ada-bo-simulation-page.png)
+<Image src={simulationPage} alt="Simulasi Transaksi" width={1920} height={937}  class="w-full h-full object-cover rounded shadow"/>
 
 #### 2. Invoice Termin
 
-![Invoice Termin](./ada-bo-invoice.png)
+<Image src={invoicePage} alt="Invoice Termin" width={600} height={500}  class="w-full h-full object-cover rounded shadow"/>
 
 #### 3. API Dokumentasi Swagger
 
-![Swagger API](./ada-bo-api.png)
+<Image src={apiPage} alt="Swagger API" width={1280} height={649} class="w-full h-full object-cover rounded shadow" />
 
 ---
 
