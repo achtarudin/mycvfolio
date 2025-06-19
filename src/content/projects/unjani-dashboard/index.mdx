@@ -1,18 +1,77 @@
 ---
-title: Project Unjani Dashboard (Bahaso)
-date: 2025-01-20
-image: ./meta.jpg
+title: "Project Unjani Dashboard (Bahaso)"
+date: 2025-06-13
+image: "./meta.jpg"
+
 seo:
-  title: Example Post with Code
-  description: Demo example for write posts
-  type: article
-  keywords: blog code, example shiki
+  title: "Project Unjani Dashboard"
+  description: "Sistem prediksi TOEFL dan manajemen sertifikat untuk Universitas Jenderal Achmad Yani, dikembangkan oleh Bahaso."
+  type: "article"
+  keywords: toefl prediction, unjani, dashboard bahaso, certificate management, astro portfolio
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+import { Image } from 'astro:assets';
+import unjaniHome from './unjani-bo-home-page.png';
+import unjaniCertificate from './unjani-bo-certificate-page.png';
+import unjaniManagement from './unjain-bo-management-page.png';
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+#### 🧾 Deskripsi Project
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+**Unjani Dashboard** adalah sistem dashboard dan backoffice yang dirancang untuk **Universitas Jenderal Achmad Yani (UNJANI)**. Project ini dikembangkan untuk memfasilitasi manajemen hasil tes TOEFL Prediction, sertifikasi peserta, serta pelaporan skor secara real-time oleh admin dan manajemen.
+
+---
+
+#### 🔧 Fitur Utama
+
+- 📊 **Dashboard Statistik**
+  - Rata-rata nilai Listening, Reading, Structure & Written Expression
+  - Distribusi skor peserta
+  - Ranking peserta dengan skor tertinggi
+
+- 📜 **Manajemen Sertifikat**
+  - Generate sertifikat hasil TOEFL Prediction otomatis dalam format PDF
+  - Preview dan download sertifikat peserta langsung dari sistem
+
+- 📈 **Manajemen Tes & Nilai**
+  - Monitoring progress tes berdasarkan batch, test name, peserta
+  - Filtering skor total dan download hasil dalam format Excel
+
+---
+
+#### 🧑‍💻 Teknologi yang Digunakan
+
+- **Frontend:** Vue.js (Nuxtjs.js) + Prisma.js
+- **Backend:** Laravel REST API + LMS Moodle
+- **Database:** MySQL
+- **Development:** Docker, Git
+- **Auth:** Super Admin & Role-based Permission
+
+---
+
+### 🖼️ Tampilan Antarmuka
+
+#### 1. Halaman Dashboard Statistik
+
+<Image src={unjaniHome} alt="Unjani Dashboard Home" width={1400} height={768} class="w-full h-full object-cover rounded shadow"/>
+
+#### 2. Halaman Sertifikat Preview
+
+<Image src={unjaniCertificate} alt="Preview Sertifikat Unjani" width={1400} height={768} class="w-full h-full object-cover rounded shadow"/>
+
+#### 3. Halaman Manajemen Tes
+
+<Image src={unjaniManagement} alt="Management Test Unjani" width={1400} height={768} class="w-full h-full object-cover rounded shadow"/>
+
+---
+
+#### 📌 Hasil & Dampak
+
+✅ Mempermudah admin kampus dalam pengelolaan skor TOEFL Prediction  
+✅ Otomatisasi penerbitan sertifikat akurat dan cepat  
+✅ Dashboard interaktif untuk pemantauan performa peserta  
+✅ Peningkatan efisiensi dan akurasi pelaporan akademik berbasis data
+
+---
+
+> Project ini menjadi bagian dari kolaborasi digitalisasi antara Bahaso dan UNJANI untuk meningkatkan mutu pelatihan dan sertifikasi berbasis data.

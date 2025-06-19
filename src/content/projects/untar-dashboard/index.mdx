@@ -1,18 +1,69 @@
 ---
-title: Project Untar Dashboard (Bahaso)
+title: 'Project Untar Dashboard (Bahaso)'
 date: 2025-01-10
-image: ./meta.jpg
+image: './meta.jpg'
+
 seo:
-  title: Example Post with Code
-  description: Demo example for write posts
-  type: article
-  keywords: blog code, example shiki
+  title: 'Project Untar Dashboard'
+  description: 'Sistem generate sertifikat dan monitoring ujian untuk Universitas Tarumanagara berbasis Laravel.'
+  type: 'article'
+  keywords: dashboard, sertifikat, ujian, backoffice, Laravel, Untar, Bahaso
+---
+import { Image } from 'astro:assets';
+import generateCertificatePage from './untar-bo-generate-certificate-page.png';
+import dashboardPage from './untar-bo-dashboard-page.png';
+
+#### 🧾 Deskripsi Project
+
+**Untar Dashboard** adalah sistem **backoffice internal** yang dikembangkan untuk **Universitas Tarumanagara (UNTAR)** dalam rangka mendukung kegiatan pelatihan online berbasis sertifikat. Sistem ini memungkinkan admin untuk:
+
+- Mengelola ujian dan peserta
+- Memonitor aktivitas ujian
+- Meng-generate sertifikat secara otomatis berdasarkan periode dan grup
+
+Project ini ditujukan untuk mempermudah pelaksanaan ujian daring dan penerbitan sertifikat melalui sistem terintegrasi.
+
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+#### 🔧 Fitur Utama
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+- 📝 **Generate Sertifikat**
+  - Filter berdasarkan tanggal dan grup
+  - Pembuatan data sertifikat otomatis dari hasil ujian
+  - Status validasi dan error tracking
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+- 📊 **Monitoring Ujian**
+  - Statistik aktivitas pengguna selama ujian
+  - Status keaktifan peserta dan progress kursus
+  - Visualisasi data berdasarkan periode tertentu
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+---
+
+#### 🧑‍💻 Teknologi yang Digunakan
+
+- **Frontend:** Laravel + Livewire
+- **Backend:** Laravel REST API + LMS Moodle
+- **Database:** Mysql, Redis
+- **Development:** Docker, Git
+- **PDF Generator:** HTML → PDF backend rendering
+
+---
+
+### 🖼️ Tampilan Antarmuka
+
+#### 1. Generate Sertifikat
+
+<Image src={generateCertificatePage} alt="Generate Sertifikat UNTAR" width={1400} height={768} class="w-full h-full object-cover rounded shadow"/>
+
+#### 2. Dashboard Monitoring
+
+<Image src={dashboardPage} alt="Dashboard Monitoring UNTAR" width={1400} height={768} class="w-full h-full object-cover rounded shadow"/>
+
+---
+
+#### 📌 Hasil & Dampak
+
+✅ Otomatisasi proses sertifikasi peserta pelatihan  
+✅ Mempermudah admin memantau dan memverifikasi aktivitas ujian  
+✅ Menurunkan potensi kesalahan dalam penerbitan sertifikat manual  
+✅ Mendukung transformasi digital dalam lingkungan akademik UNTAR
