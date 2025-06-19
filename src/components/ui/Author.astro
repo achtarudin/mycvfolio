@@ -9,7 +9,7 @@ const { avatar, name, headline, username, location, pronouns } = Astro.props;
 const image = await getImage({ src: avatar, format: 'avif' });
 ---
 
-<div class:list={[false ? 'flex items-center gap-4' : 'hidden']}>
+<div class:list={[true ? 'flex items-center gap-4' : 'hidden']}>
   <div class="relative rounded-full shrink-0 overflow-hidden">
     <Image
       loading="eager"
