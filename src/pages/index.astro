@@ -7,6 +7,7 @@ import { DEFAULT_CONFIGURATION } from '@/lib/constants';
 import WorkExperience from '@/components/ui/WorkExperience.astro';
 import Education from '@/components/ui/Education.astro';
 import { sortJobsByDate } from '@/lib/utils';
+import CourseAndCertificate from '@/components/ui/CourseAndCertificate.astro';
 
 const entry = await getEntry('pages', 'homepage');
 let Content;
@@ -19,6 +20,7 @@ const links = await getCollection('links');
 const jobs = await getCollection('jobs');
 const sortedJobs = sortJobsByDate(jobs);
 const educations = await getCollection('educations');
+const courseAndCertificate = await getCollection('courseAndCertificate');
 
 ---
 
@@ -93,7 +95,18 @@ const educations = await getCollection('educations');
       </Container>
     )
   }
+  {
+    courseAndCertificate.length > 0 && (
+      <Container as='section' class='py-6'>
+        <div class="flex flex-col gap-5">
+          <span class="text-headings">Course/Sertifikat</span>
+          <ul class="flex flex-col gap-8">
+            {courseAndCertificate.map((education) => (
+              <CourseAndCertificate entry={education} />
+            ))}
+          </ul>
+        </div>
+      </Container>
+    )
+  }
 </BaseLayout>
-<script>
-  // window.location.href = '/projects';
-</script>

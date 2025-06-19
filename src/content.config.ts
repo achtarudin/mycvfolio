@@ -78,6 +78,20 @@ const educationCollection = defineCollection({
   }),
 });
 
+const courseAndCertificateCollection = defineCollection({
+  loader: glob({
+    pattern: '**/[^_]*.{md,mdx}',
+    base: './src/content/course-and-certificate',
+  }),
+  schema: z.object({
+    title: z.string(),
+    year: z.number(),
+    event: z.string(),
+    location: z.string(),
+    url: z.string(),
+  }),
+});
+
 const postCollection = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/posts' }),
   schema: ({ image }) =>
@@ -90,7 +104,10 @@ const postCollection = defineCollection({
 });
 
 const projectCollection = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/projects' }),
+  loader: glob({
+    pattern: '**/[^_]*.{md,mdx}',
+    base: './src/content/projects',
+  }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -106,6 +123,7 @@ export const collections = {
   jobs: jobCollection,
   talks: talkCollection,
   educations: educationCollection,
+  courseAndCertificate: courseAndCertificateCollection,
   posts: postCollection,
   projects: projectCollection,
 };
