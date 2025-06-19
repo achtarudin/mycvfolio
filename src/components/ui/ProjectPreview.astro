@@ -1,7 +1,10 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { formatDate } from '@/lib/utils';
 import { render } from 'astro:content';
+import { Image } from 'astro:assets';
+
+import { formatDate } from '@/lib/utils';
+
 interface Props {
   entry: CollectionEntry<'projects'>;
 }
@@ -10,18 +13,23 @@ const { entry } = Astro.props;
 const { remarkPluginFrontmatter } = await render(entry);
 ---
 
-<li class="py-2">
-  <div class="flex gap-5">
-    <div class="relative min-w-22 shrink-0">
-      <span class="text-muted-foreground text-sm"
-        >{formatDate(entry.data.date)}</span
-      >
-    </div>
-    <a href={`/projects/${entry.id}/`} class="flex flex-col gap-3">
-      <div class="flex flex-col">
-        <span class="text-headings font-medium">{entry.data.title}</span>
+<li>
+  <div class="flex gap-4 items-center">
+    {
+      entry.data.image && (
+        <Image
+          src={entry.data.image}
+          alt={entry.data.title}
+          class="object-cover w-15 h-15 rounded-full shadow"
+        />
+      )
+    }
+    <a href={`/projects/${entry.id}/`} class="grow">
+      <div class="text-headings font-medium">{entry.data.title}</div>
+      <div class="text-muted-foreground text-sm">
+        {formatDate(entry.data.date)} ({remarkPluginFrontmatter.minutesRead})
       </div>
     </a>
   </div>
-  <div class="w-full h-[208px] bg-red-400 rounded shadow"></div>
 </li>
+

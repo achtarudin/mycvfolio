@@ -1,8 +1,8 @@
 import { DEFAULT_CONFIGURATION } from './constants';
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry, ContentEntryMap } from 'astro:content';
 
 export const formatDate = (date: Date) => {
-  const formatter = new Intl.DateTimeFormat('en-US', {
+  const formatter = new Intl.DateTimeFormat('id-ID', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
@@ -34,3 +34,17 @@ export const sortJobsByDate = (jobs: CollectionEntry<'jobs'>[]) => {
     return nextEnd - currentEnd || next.data.from - current.data.from;
   });
 };
+
+export function sortByDateKey<T extends Record<string, any>>(
+  items: T[],
+  key: string
+): T[] {
+  try {
+    return items.sort(
+      (a, b) =>
+        new Date(b.data[key]).getTime() - new Date(a.data[key]).getTime()
+    );
+  } catch (error) {
+    return items;
+  }
+}
