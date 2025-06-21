@@ -1,6 +1,8 @@
 ---
 import '@/styles/global.css';
 import '@/assets/fonts/inter.css';
+import { Analytics } from '@vercel/analytics/next';
+
 import { type Seo } from '@/lib/constants';
 import BannerFloat from '@/components/BannerFloat.astro';
 import Header from '@/components/partials/Header.astro';
@@ -9,7 +11,7 @@ import Head from '@/components/partials/Head.astro';
 import SwitchTheme from '@/components/SwitchTheme.tsx';
 
 interface Props {
-  seo?: Seo
+  seo?: Seo;
 }
 
 const { seo } = Astro.props;
@@ -21,6 +23,7 @@ const { seo } = Astro.props;
     <Header />
     <main class="pt-24">
       <slot />
+      <Analytics />
     </main>
     <Footer />
     <SwitchTheme client:only="react" />
