@@ -11,13 +11,20 @@ const { Content } = await render(entry);
 
 <li class="py-0.5">
   <div class="flex gap-5">
-    <div class="relative min-w-28 shrink-0">
+    <div class="relative min-w-28 shrink-0 hidden sm:block">
       <span class="text-muted-foreground text-sm">{entry.data.year}</span>
     </div>
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-3 grow">
       <div class="flex flex-col">
         <span class="text-headings font-medium">{entry.data.title}</span>
-        <span class="text-foreground text-sm">{entry.data.event}, {entry.data.location}</span>
+        <div>
+          <span class="text-foreground text-sm">
+            {entry.data.event}, {entry.data.location}
+          </span>
+          <span class="text-foreground text-sm sm:visible md:hidden">
+            ({entry.data.year})
+          </span>
+        </div>
       </div>
       <div class="prose dark:prose-invert prose-sm">
         <Content />
